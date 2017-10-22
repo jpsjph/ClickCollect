@@ -12,6 +12,7 @@ resolvers += Classpaths.typesafeReleases
 
 libraryDependencies ++= Seq(
   "org.json4s"   %% "json4s-native"% "3.5.2",
+  "com.google.code.gson" % "gson" % "2.8.2",
   "org.scalatra" %% "scalatra" % ScalatraVersion,
   "org.scalatra" %% "scalatra-swagger"  % ScalatraVersion,
   "org.scalatra" %% "scalatra-scalatest" % ScalatraVersion % "test",

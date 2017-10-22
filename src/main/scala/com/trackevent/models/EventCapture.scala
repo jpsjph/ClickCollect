@@ -3,7 +3,6 @@ package com.trackevent.models
 case class EventCapture(eventId:String,
                         date:Long,
                         userName:String,
-                        serverName:String,
                         port:Int,
                         httpStatus:Int,
                         cookie:String,
@@ -12,3 +11,9 @@ case class EventCapture(eventId:String,
                         content:String,
                         uriStem:String,
                         uriQuery:String)
+
+case class ClickEvent(eventId:String,
+                      name:String,
+                      action:String,
+                      numbers:String,
+                      browser:String)
