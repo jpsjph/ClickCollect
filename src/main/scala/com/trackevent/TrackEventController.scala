@@ -19,15 +19,12 @@ class TrackEventController(implicit val swagger: Swagger,
   override protected def applicationDescription: String = "TrackEvent API. It exposed operations for collecting all users behaviours"
 
 
-/*  get("/") {
-    params.get("eventId") match {
-      case Some(id)=>Ok(findEvents(id))
-      case None=>Ok(all)
-    }
-  } */
+  options("/*"){
+  response.setHeader("Access-Control-Allow-Origin", "*")
+  }
 
   post("/eventClicks"){
-    response.setHeader("Access-Control-Allow-Origin", "*")
+    response.setHeader("Access-Control-Allow-Headers", request.getHeader("Access-Control-Request-Headers"))
      val jsonString= request.body
     try {
       val gson = new Gson
